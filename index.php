@@ -4,7 +4,7 @@
     <h1>Menu</h1>
     <ul>
         <li>
-            <a href="events">Upcoming Events</a>
+            <a href="events_manager">Upcoming Events</a>
         </li>
     </ul>
 </main>
