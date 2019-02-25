@@ -4,7 +4,10 @@
     <h1>Menu</h1>
     <ul>
         <li>
-            <a href="events_manager">Events</a>
+            <a href="events">Events</a>
+        </li>
+        <li>
+            <a href="events_manager/">Event Manager</a>
         </li>
     </ul>
 </main>
