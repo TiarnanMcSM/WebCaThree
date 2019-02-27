@@ -16,6 +16,7 @@ if ($action == 'list_events') {
             FILTER_VALIDATE_INT);
     if ($sport_id == NULL || $sport_id == FALSE) {
         $sport_id = 1;
+        
     }
     $sports = get_sports();
     $sport_name = get_sport_name($sport_id);

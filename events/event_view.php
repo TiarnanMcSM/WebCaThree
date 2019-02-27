@@ -7,9 +7,9 @@
     <section>
         <h1><?php echo $name; ?></h1>
         <div id="right_column">
-            <p><b>Event Name:</b> <?php echo $name; ?></p>
-            <p><b>Start Date:</b> <?php echo $date; ?></p>
-            <p><b>Location:</b> <?php echo $location; ?></p>
+            <p><b>Event Name :</b> <?php echo $name; ?></p>
+            <p><b>Start Date of event :</b> <?php echo $date; ?></p>
+            <p><b>Location of event :</b> <?php echo $location; ?></p>
         </div>
     </section>
 </main>

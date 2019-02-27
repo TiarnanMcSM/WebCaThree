@@ -1,14 +1,14 @@
 <?php include '../view/header.php'; ?>
 <main>
     <aside>
-        <!-- display a list of categories -->
+        <!-- display a list of Sports -->
         <h2>Sports</h2>
         <?php include '../view/sport_nav.php'; ?>        
     </aside>
     <section>
         <h1><?php echo $sport_name; ?></h1>
         <ul class="nav">
-            <!-- display links for products in selected category -->
+            <!-- display links for events in selected sport -->
             <?php foreach ($events as $event) : ?>
             <li>
                 <a href="?action=view_event&amp;event_id=<?php 
