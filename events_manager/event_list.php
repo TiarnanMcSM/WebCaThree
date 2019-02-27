@@ -47,7 +47,7 @@
             <?php endforeach; ?>
         </table>
         <p><a href="?action=show_add_form">Add Event</a></p>
-        <p><a href="?action=list_categories">List Sports</a></p>
+        <p><a href="?action=list_sports">List Sports</a></p>
     </section>
 
 </main>

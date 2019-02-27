@@ -11,7 +11,7 @@ if ($action == NULL) {
     }
 }
 
-if ($action == 'list_products') {
+if ($action == 'list_events') {
     // Get the current category ID
     $sport_id = filter_input(INPUT_GET, 'sport_id', 
             FILTER_VALIDATE_INT);
@@ -84,7 +84,7 @@ if ($action == 'list_products') {
         $error = "Invalid event data. Check all fields and try again.";
         include('../errors/error.php');
     } else { 
-        add_product($sport_id, $name, $date, $location);
+        add_event($sport_id, $name, $date, $location);
         header("Location: .?sport_id=$sport_id");
     }
 } else if ($action == 'list_sports') {
