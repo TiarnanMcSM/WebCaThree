@@ -15,7 +15,7 @@ function get_sport_name($sport_id) {
     $statement = $db->prepare($query);
     $statement->bindValue(':sport_id', $sport_id);
     $statement->execute();    
-    $category = $statement->fetch();
+    $sport = $statement->fetch();
     $statement->closeCursor();    
     $sport_name = $sport['sportName'];
     return $sport_name;

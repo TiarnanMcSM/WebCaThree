@@ -1,7 +1,7 @@
 <?php
     $dsn = 'mysql:host=localhost;dbname=d00212830';
-    $username = 'mgs_user';
-    $password = 'pa55word';
+    $username = 'root';
+    $password = '';
 
     try {
         $db = new PDO($dsn, $username, $password);

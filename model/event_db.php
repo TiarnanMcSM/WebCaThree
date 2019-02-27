@@ -28,7 +28,7 @@ function get_event($event_id) {
     $query = 'SELECT * FROM events
               WHERE eventID = :event_id';
     $statement = $db->prepare($query);
-    $statement->bindValue(":event", $event_id);
+    $statement->bindValue(":event_id", $event_id);
     $statement->execute();
     $event = $statement->fetch();
     $statement->closeCursor();
@@ -45,7 +45,7 @@ function delete_event($event_id) {
     $statement->closeCursor();
 }
 
-function add_product($sport_id, $name, $date, $location) {
+function add_event($sport_id, $name, $date, $location) {
     global $db;
     $query = 'INSERT INTO events
                  (sportID, eventName, startDate, location)
@@ -60,7 +60,7 @@ function add_product($sport_id, $name, $date, $location) {
     $statement->closeCursor();
 }
 
-function update_product($event_id, $sport_id, $name, $date, $location) {
+function update_event($event_id, $sport_id, $name, $date, $location) {
     global $db;
     $query = 'UPDATE events
               SET sportID = :sport_id,
