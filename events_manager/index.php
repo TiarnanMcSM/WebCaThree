@@ -30,7 +30,7 @@ if ($action == 'list_events') {
     $event_id = filter_input(INPUT_POST, 'event_id', 
             FILTER_VALIDATE_INT);
     if ($event_id == NULL || $event_id == FALSE) {
-        $error = "Missing or incorrect product id.";
+        $error = "Missing or incorrect event id.";
         include('../errors/error.php');
     } else { 
         $event = get_event($event_id);
@@ -54,7 +54,7 @@ if ($action == 'list_events') {
     } else {
         update_event($event_id, $sport_id, $name, $date, $location);
 
-        // Display the Product List page for the current category
+        // Display the Event List page for the current event
         header("Location: .?sport_id=$sport_id");
     }
 } else if ($action == 'delete_event') {
@@ -99,12 +99,12 @@ if ($action == 'list_events') {
         include('../errors/error.php');
     } else {
         add_sport($name);
-        header('Location: .?action=list_sports');  // display the Category List page
+        header('Location: .?action=list_sports');  // display the Event List page
     }
 } else if ($action == 'delete_sport') {
     $sport_id = filter_input(INPUT_POST, 'sport_id', 
             FILTER_VALIDATE_INT);
     delete_sport($sport_id);
-    header('Location: .?action=list_sports');      // display the Category List page
+    header('Location: .?action=list_sports');      // display the Event List page
 }
 ?>

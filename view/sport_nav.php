@@ -1,6 +1,6 @@
 <nav>
             <ul>
-                <!-- display links for all categories -->
+                <!-- display links for all events -->
                 <?php foreach($sports as $sport) : ?>
                 <li>
                     <a href="?sport_id=<?php 
