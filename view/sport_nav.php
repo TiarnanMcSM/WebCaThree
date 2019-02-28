@@ -3,7 +3,7 @@
                 <!-- display links for all categories -->
                 <?php foreach($sports as $sport) : ?>
                 <li>
-                    <a href="?category_id=<?php 
+                    <a href="?sport_id=<?php 
                               echo $sport['sportID']; ?>">
                         <?php echo $sport['sportName']; ?>
                     </a>
