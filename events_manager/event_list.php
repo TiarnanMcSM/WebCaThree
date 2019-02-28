@@ -11,6 +11,7 @@
 
     <section>
         <!-- display a table of events -->
+        <?php $events = get_events()?>
         <h2><?php echo $sport_name; ?></h2>
         <table>
             <tr>

@@ -52,7 +52,7 @@ if ($action == 'list_events') {
         $error = "Invalid event data. Check all fields and try again.";
         include('../errors/error.php');
     } else {
-        update_event($product_id, $category_id, $name, $date, $location);
+        update_event($event_id, $category_id, $name, $date, $location);
 
         // Display the Product List page for the current category
         header("Location: .?sport_id=$sport_id");
