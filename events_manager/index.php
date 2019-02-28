@@ -12,19 +12,19 @@ if ($action == NULL) {
 }
 
 if ($action == 'list_events') {
-    // Get the current category ID
+    // Get the current sport ID
     $sport_id = filter_input(INPUT_GET, 'sport_id', 
             FILTER_VALIDATE_INT);
     if ($sport_id == NULL || $sport_id == FALSE) {
         $sport_id = 1;
     }
     
-    // Get product and category data
+    // Get event and sport data
     $sport_name = get_sport_name($sport_id);
     $sports = get_sports();
-    $eventss = get_events_by_sport($sport_id);
+    $events = get_events_by_sport($sport_id);
 
-    // Display the product list
+    // Display the event list
     include('event_list.php');
 } else if ($action == 'show_edit_form') {
     $event_id = filter_input(INPUT_POST, 'event_id', 
@@ -52,7 +52,7 @@ if ($action == 'list_events') {
         $error = "Invalid event data. Check all fields and try again.";
         include('../errors/error.php');
     } else {
-        update_event($event_id, $category_id, $name, $date, $location);
+        update_event($event_id, $sport_id, $name, $date, $location);
 
         // Display the Product List page for the current category
         header("Location: .?sport_id=$sport_id");

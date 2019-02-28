@@ -33,7 +33,7 @@ if ($action == 'list_events') {
         $sports = get_sports();
         $event = get_event($event_id);
 
-        // Get product data
+        // Get event data
         $name = $event['eventName'];
         $date = $event['startDate'];
         $location = $event['location'];
